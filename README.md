@@ -67,7 +67,7 @@ Compatível com os principais navegadores modernos:
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/seu-usuario/eplay.git
+git clone https://github.com/lllleao/eplay
 
 # Instalar dependências
 npm install
