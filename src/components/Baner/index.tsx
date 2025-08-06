@@ -6,10 +6,9 @@ import { useGetFeaturedGameQuery } from '../../services/api'
 
 import * as S from './style'
 import Loader from '../Loader'
+import { game } from '../../mock'
 
 const Baner = () => {
-    const { data: game } = useGetFeaturedGameQuery()
-
     if (!game) {
         return <Loader />
     }

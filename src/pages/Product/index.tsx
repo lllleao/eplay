@@ -6,6 +6,7 @@ import Gallery from '../../components/Gallery'
 
 import { useGetGameQuery } from '../../services/api'
 import Loader from '../../components/Loader'
+import { game } from '../../mock'
 
 type GameParams = {
     id: string
@@ -13,7 +14,7 @@ type GameParams = {
 
 const Product = () => {
     const { id } = useParams() as GameParams
-    const { data: game } = useGetGameQuery(id)
+    // const { data: game } = useGetGameQuery(id)
 
     if (!game) {
         return <Loader />

@@ -42,6 +42,7 @@ export const Modal = styled.div`
     position: fixed;
     inset: 0;
     z-index: 1;
+    padding: 1rem;
 
     &.visible {
         display: flex;
@@ -76,7 +77,7 @@ export const ModalContent = styled.div`
     }
     > img {
         display: block;
-        width: 100%;
+        width: 50%;
     }
 
     iframe {
