@@ -1,18 +1,16 @@
 import Baner from '../../components/Baner'
 import ProductList from '../../components/ProductList'
-import { game } from '../../mock'
 
 import { useGetOnSaleQuery, useGetSoonQuery } from '../../services/api'
 
 const Home = () => {
     const { data: onSaleGames, isLoading: isLoadingSale } = useGetOnSaleQuery()
     const { data: soonGames, isLoading: isLoadingSoon } = useGetSoonQuery()
-    const gameProductList: Game[] = [game, game, game, game, game]
     return (
         <>
             <Baner />
             <ProductList
-                games={gameProductList}
+                games={onSaleGames}
                 background="black"
                 title="Promoções"
                 id="on-sale"
@@ -20,7 +18,7 @@ const Home = () => {
             />
             <ProductList
                 id="coming-soon"
-                games={gameProductList}
+                games={soonGames}
                 background="gray"
                 title="Em breve"
                 isLoading={isLoadingSoon}

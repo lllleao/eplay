@@ -1,5 +1,4 @@
 import ProductList from '../../components/ProductList'
-import { game } from '../../mock'
 
 import {
     useGetActionGamesQuery,
@@ -19,41 +18,40 @@ const Categories = () => {
         useGetSimulationGamesQuery()
     const { data: gamesEsportes, isLoading: isLoadingSports } =
         useGetSportsGamesQuery()
-    const gameProductList: Game[] = [game, game, game, game, game]
 
     return (
         <>
             <ProductList
                 id="action"
-                games={gameProductList}
+                games={gamesAcao}
                 background="black"
                 title="Ação"
                 isLoading={isLoadingAction}
             />
             <ProductList
                 id="sports"
-                games={gameProductList}
+                games={gamesEsportes}
                 background="gray"
                 title="Esportes"
                 isLoading={isLoadingSports}
             />
             <ProductList
                 id="fight"
-                games={gameProductList}
+                games={gamesLuta}
                 background="black"
                 title="Luta"
                 isLoading={isLoadingFight}
             />
             <ProductList
                 id="rpg"
-                games={gameProductList}
+                games={gamesRPG}
                 background="gray"
                 title="RPG"
                 isLoading={isLoadingRPG}
             />
             <ProductList
                 id="simulation"
-                games={gameProductList}
+                games={gamesSimulacao}
                 background="black"
                 title="Simulação"
                 isLoading={isLoadingSimulation}
