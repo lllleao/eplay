@@ -15,7 +15,9 @@ function App() {
                 <div className="container">
                     <Header />
                 </div>
-                <Rotas />
+                <main>
+                    <Rotas />
+                </main>
                 <Footer />
                 <Cart />
             </BrowserRouter>
